@@ -5,7 +5,7 @@
 <template>
     <footer class="footer">
         <div class="container">
-            <p class="footer_text">© {{ currentTime.getFullYear() || 2000 }} <a href="/" class="footer_link">Vue Commerce</a>. All rights reserved</p>
+            <p class="footer_text">© {{ currentTime.getFullYear() || 2000 }} <router-link :to="{name: 'home'}" class="footer_link">Vue Commerce</router-link>. All rights reserved</p>
         </div>
     </footer>
 </template>

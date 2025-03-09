@@ -10,10 +10,10 @@
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar_wrapper">
-				<a href="/" class="navbar_brand">
-					<img alt="Vue logo" class="navbar_brand_logo" :src=SiteLogo width="60" />
+				<router-link :to="{ name: 'home' }" class="navbar_brand">
+					<img class="navbar_brand_logo" :src="SiteLogo" alt="Vue logo" width="60" />
 					<span>Vue Commerce</span>
-				</a>
+				</router-link>
 				<div class="navbar_list">
 					<router-link :to="{ name: 'home' }" class="navbar_link">Home</router-link>
 					<router-link :to="{ name: 'add-product' }" class="navbar_link">Add product</router-link>

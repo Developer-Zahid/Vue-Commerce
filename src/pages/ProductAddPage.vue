@@ -1,9 +1,11 @@
 <script setup>
-	import HomeBannerSection from '@/components/sections/HomeBannerSection.vue';
+	import CommonBannerSection from '@/components/sections/CommonBannerSection.vue';
+    import ProductAddSection from '@/components/sections/ProductAddSection.vue';
 </script>
 
 <template>
-    <HomeBannerSection title="Add a Product" />
+    <CommonBannerSection title="Add a Product" />
+    <ProductAddSection />
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <script setup>
-    const {product} = defineProps({
+    defineProps({
         product: {
             type: Object,
             required: true,
@@ -10,7 +10,7 @@
 <template>
     <article class="product-card">
         <figure class="product-card_header">
-            <img class="product-card_image" :src="product.image" :alt="product.title" height="300">
+            <img class="product-card_image" :src="product.image" :alt="product.title" height="300" loading="lazy" />
         </figure>
         <div class="product-card_body">
             <div class="product-card_meta">

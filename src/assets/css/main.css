@@ -52,7 +52,7 @@ button {
   font-family: inherit;
 }
 
-button:is([type="button"], [type="submit"])
+button:is([type="button"], [type="submit"]):not([disabled])
 {
   cursor: pointer;
 }

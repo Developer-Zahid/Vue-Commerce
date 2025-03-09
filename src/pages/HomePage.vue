@@ -1,5 +1,5 @@
 <script setup>
-	import HomeBannerSection from '@/components/sections/HomeBannerSection.vue';
+	import HomeBannerSection from '@/components/sections/CommonBannerSection.vue';
 	import HomeProductSection from '@/components/sections/HomeProductSection.vue';
 </script>
 
