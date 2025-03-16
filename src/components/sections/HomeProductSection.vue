@@ -1,7 +1,7 @@
 <script setup>
     import { ref } from 'vue';
     import ProductCard from '@/components/cards/ProductCard.vue';
-    import useProductsStore from '@/stores/products';
+    import useProductsStore from '@/stores/productsStore';
 
     const productsStore = useProductsStore();
 

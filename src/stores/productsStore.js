@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 const useProductsStore = defineStore('products', {
     state: () => ({
@@ -84,7 +84,7 @@ const useProductsStore = defineStore('products', {
                 "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
                 "created_at": "03/09/2025"
             }
-        ]        
+        ]
     }),
     getters: {
         sortNewestToOldestProducts: (state) => {

@@ -1,7 +1,7 @@
 <script setup>
 import {reactive, computed} from 'vue';
 import { useRouter } from 'vue-router'
-import useProductsStore from '@/stores/products';
+import useProductsStore from '@/stores/productsStore';
 
 const router = useRouter();
 const productsStore = useProductsStore();
@@ -25,6 +25,7 @@ const handleFormSubmit = ()=>{
 </script>
 
 <template>
+    <!-- Section Add Product -->
     <section class="section-form">
         <div class="container">
             <form @submit.prevent="handleFormSubmit" class="form">

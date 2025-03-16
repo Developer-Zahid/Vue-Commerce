@@ -1,8 +1,8 @@
 <script setup>
-    import { ref } from 'vue';
+	import useCartStore from '@/stores/cartStore';
 	import SiteLogo from '@/assets/images/logo.svg';
 
-    const cartCount = ref(0);
+    const cartStore = useCartStore();
 </script>
 
 <template>
@@ -17,7 +17,7 @@
 				<div class="navbar_list">
 					<router-link :to="{ name: 'home' }" class="navbar_link">Home</router-link>
 					<router-link :to="{ name: 'add-product' }" class="navbar_link">Add product</router-link>
-					<a href="#!" class="navbar_link">Cart ({{ cartCount }})</a>
+					<a href="#!" class="navbar_link">Cart ({{ cartStore.totalItems || 0 }})</a>
 				</div>
 			</div>
 		</div>

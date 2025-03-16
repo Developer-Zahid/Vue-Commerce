@@ -1,10 +1,13 @@
 <script setup>
+    import useCartStore from '@/stores/cartStore';
     defineProps({
         product: {
             type: Object,
             required: true,
         }
-    }); 
+    });
+
+    const cartStore = useCartStore();
 </script>
 
 <template>
@@ -19,12 +22,20 @@
             </div>
             <h3 class="product-card_title">{{ product.title }}</h3>
             <p class="product-card_description">{{ product.description }}</p>
-            <button type="button" class="product-card_btn">Add to Cart</button>
+            <button @click="cartStore.addToCart(product)" type="button" class="product-card_btn">Add to Cart</button>
         </div>
     </article>
 </template>
 
 <style scoped>
+    @keyframes plus {
+        0% {
+            box-shadow: 0 0 0 0 var(--color-primary);
+        }
+        100% {
+            box-shadow: 0 0 0 1em transparent;
+        }
+    }
     .product-card {
         display: flex;
         flex-direction: column;
@@ -107,6 +118,7 @@
             &:active {
                 background-color: var(--color-primary);
                 border-color: var(--color-primary);
+                animation: plus 0.1s ease-out forwards;
             }
         }
     }
